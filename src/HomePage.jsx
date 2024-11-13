@@ -1,3 +1,4 @@
+// HomePage.js
 import React from 'react'; 
 import './HomePage.css';
 import { Link } from 'react-router-dom'; 
@@ -12,12 +13,11 @@ const HomePage = () => {
         <ul className="nav-links">
           {['Link Up', 'Messenger APP', 'Services'].map(item => (
             <li key={item}>
-              <a href={`#${item.toLowerCase().replace(' ', '-')}`}><b>{item}</b></a>
+              <a href={item === 'Services' ? '#footer' : `#${item.toLowerCase().replace(' ', '-')}`}>
+                <b>{item}</b>
+              </a>
             </li>
           ))}
-          <li>
-            <Link to="/chat"><b>Chat</b></Link>
-          </li>
         </ul>
 
         <div className="auth-buttons">
@@ -36,7 +36,6 @@ const HomePage = () => {
       <section id="messenger-app">
         <MessengerAppSection />
       </section>
-
       <Footer />
     </div>
   );

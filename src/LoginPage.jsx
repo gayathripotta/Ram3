@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './Login.css';
 
 const LoginPage = ({ setIsLoggedIn }) => {
@@ -10,10 +10,9 @@ const LoginPage = ({ setIsLoggedIn }) => {
   const navigate = useNavigate();
   const validEmail = 'jyosthna.ghanta@gmail.com';
   const validPassword = '1234';
-
   const handleLogin = (e) => {
     e.preventDefault();
-    setErrorMessage(''); // Clear previous error message
+    setErrorMessage('');
     if (email === validEmail && password === validPassword) {
       setIsLoggedIn(true);
       setSuccessMessage('Login successful! Redirecting to chat...');
@@ -29,8 +28,6 @@ const LoginPage = ({ setIsLoggedIn }) => {
     <div className="login-signup-page">
       <div className="form-container">
         <h1>Login</h1>
-        {successMessage && <div className="success-message">{successMessage}</div>}
-        {errorMessage && <div className="error-message">{errorMessage}</div>}
         <form onSubmit={handleLogin}>
           <div className="input-group">
             <label>Email</label>
@@ -54,7 +51,11 @@ const LoginPage = ({ setIsLoggedIn }) => {
           </div>
           <button type="submit" className="btn">Login</button>
         </form>
-        <p>Don't have an account? <a href="/signup">Sign up here</a></p>
+
+        {}
+        <p>Don't have an account? <Link to="/signup">Sign up here</Link></p>
+        {successMessage && <div className="success-message">{successMessage}</div>}
+        {errorMessage && <div className="error-message">{errorMessage}</div>}
       </div>
     </div>
   );

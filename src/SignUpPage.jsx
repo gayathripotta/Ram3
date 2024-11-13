@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom'; // Import Link
 import './SignUpPage.css';
 
 const SignUpPage = () => {
@@ -23,7 +23,7 @@ const SignUpPage = () => {
 
     if (newErrors.length === 0) {
       console.log('Form submitted:', formData);
-      navigate("/login");
+      navigate("/login"); // Redirect to login after successful signup
     } else {
       setErrors(newErrors);
     }
@@ -77,7 +77,8 @@ const SignUpPage = () => {
             </div>
           )}
         </form>
-        <p>Already have an account? <a href="/login">Login here</a></p>
+        {}
+        <p>Already have an account? <Link to="/login">Login here</Link></p>
       </div>
     </div>
   );

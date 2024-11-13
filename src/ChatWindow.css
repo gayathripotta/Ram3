@@ -1,46 +1,139 @@
-.chat-window {
-  width: 80vw;
-  margin: 50px auto;
+.chat-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  background-image: url('https://i.pinimg.com/564x/2f/e1/30/2fe1303338d67b1b6ddfe71e3311f312.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+}
+
+.chat-layout {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 0;
+  box-shadow: none; 
+  overflow: hidden;
+}
+
+.friends-list {
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f4f4f4;
+  border-right: 1px solid #ccc;
+  height: 100%; 
+}
+
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
   background-color: #fff;
+  height: 100%;
 }
-
 .messages {
-  height: 300px;
+  flex-grow: 1;
   overflow-y: auto;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-}
-
-.message {
+  border: 1px solid #ccc;
   padding: 10px;
   margin-bottom: 10px;
-  border-radius: 4px;
-  background-color: #5bb1cd; /* Maintain consistent background color */
-  color: black;
+  height: calc(100% - 60px);
 }
+.message {
+  background-color: #8fcff2; 
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  width: fit-content;
+}
+
+.message-time {
+  font-size: 12px;
+  color: white;
+}
+
 
 .message-input {
   display: flex;
 }
+.friends-list h3, .friends-list h4 {
+  margin: 10px 0;
+  color:black;
+}
 
+.friend-input, .add-friend-button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.add-friend-button {
+  background-color: rgb(25, 96, 158);
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+
+}
+
+.friends-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.friends-list li {
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+}
+
+.friends-list li.active-friend {
+  background-color: #a3d8f4;
+}
+
+
+.name {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 .message-input input {
   flex-grow: 1;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
 }
 
 .message-input button {
-  padding: 10px 20px;
-  margin-left: 10px;
-  background-color: #5bb1cd;
-  color: white;
+  padding: 10px;
   border: none;
-  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
   cursor: pointer;
+}
+.centered {
+  text-align: center;
+  width: 10%;
+}
+
+.centered-input {
+  width: 100%;
+  padding: 10px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }

@@ -17,6 +17,21 @@ const MessengerAppSection = () => {
       imgSrc: "https://tse3.mm.bing.net/th?id=OIP.iDSONLX9KxUh6JOBYNoedQHaGA&pid=Api&P=0&h=180",
       title: "Home Tab",
       description: "You can access various information and services."
+    },
+    {
+      imgSrc: "https://tse2.mm.bing.net/th?id=OIP.XfPbWMAg4mHTfQCvyM-dugHaEK&pid=Api&P=0&h=180",
+      title: "Themes",
+      description: "You can share your feelings through the themes."
+    },
+    {
+      imgSrc: "https://tse2.mm.bing.net/th?id=OIP.0x0j1G0K7hj4pdINt3-NcgHaEj&pid=Api&P=0&h=180",
+      title: "Open Chat",
+      description: "You can meet new friends with similar interests and share fun news and information.."
+    },
+    {
+      imgSrc: "https://tse4.mm.bing.net/th?id=OIP.dSmCiTiHzcfFYtCETTl6FQHaIQ&pid=Api&P=0&h=180",
+      title: "Friendly",
+      description: "Meet new single women and men everyday without limits, make friendships."
     }
   ];
 
